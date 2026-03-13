@@ -35,8 +35,8 @@ function setCache<T>(key: string, data: T): void {
   cache.set(key, { data, timestamp: Date.now() });
 }
 
-const ACTUAL_API = process.env.NEXT_PUBLIC_ACTUAL_API_URL || "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream";
-const FORECAST_API = process.env.NEXT_PUBLIC_FORECAST_API_URL || "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream";
+const ACTUAL_API = process.env.NEXT_PUBLIC_ACTUAL_API_URL!;
+const FORECAST_API = process.env.NEXT_PUBLIC_FORECAST_API_URL!;
 
 export async function fetchActualGeneration(): Promise<ActualGenerationRecord[]> {
   const cacheKey = "actual-jan-2024";

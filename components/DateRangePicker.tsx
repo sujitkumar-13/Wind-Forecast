@@ -11,8 +11,8 @@ interface DateRangePickerProps {
 }
 
 const DateRangePicker = ({ dateRange, onDateRangeChange }: DateRangePickerProps) => {
-  const fromDate = new Date(process.env.NEXT_PUBLIC_DEFAULT_START_DATE || "2024-01-01");
-  const toDate = new Date(process.env.NEXT_PUBLIC_DEFAULT_END_DATE || "2024-01-31");
+  const fromDate = new Date(process.env.NEXT_PUBLIC_DEFAULT_START_DATE!);
+  const toDate = new Date(process.env.NEXT_PUBLIC_DEFAULT_END_DATE!);
 
   return (
     <div className="card-glass rounded-lg p-4">
