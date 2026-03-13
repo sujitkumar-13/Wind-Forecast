@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+# Wind Power Forecast Monitoring & Analysis
 
-## Project info
+This project is a submission for the Full Stack SWE challenge. It includes a web application for monitoring wind power forecasts and a Jupyter notebook for deep analysis of forecast errors and wind generation reliability.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Live Demo
+- **App Link**: [Deploy on Vercel/Heroku/Similar](https://your-app-link.vercel.app)
+- **Demo Video**: [YouTube Link](https://youtube.com/link-to-video)
 
-## How can I edit this code?
+## 📁 Repository Structure
+- `src/`: Core React application logic.
+    - `components/`: UI components (Charts, Controls, Stats).
+    - `lib/`: Data fetching, forecast logic, and processing.
+    - `pages/`: Main application view.
+- `analysis.ipynb`: Jupyter notebook containing detailed forecast analysis.
+- `public/`: Static assets and icons.
 
-There are several ways of editing your application.
+## 🛠️ Technologies Used
+- **Frontend**: Vite, React, TypeScript, Tailwind CSS, shadcn/ui.
+- **Charts**: Recharts, Framer Motion for animations.
+- **Analysis**: Python (Pandas, Numpy, Matplotlib, Seaborn).
+- **AI Tools**: Assisted with UI design refinement and logic debugging.
 
-**Use Lovable**
+## ⚙️ How to Start the Application
+### Local Development
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the dev server:
+   ```bash
+   npm run dev
+   ```
+4. Build for production:
+   ```bash
+   npm run build
+   ```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Running Analysis
+1. Ensure Python and Jupyter are installed.
+2. Install requirements: `pip install pandas numpy matplotlib seaborn`.
+3. Open `analysis.ipynb` in your preferred editor.
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📊 Forecast Monitoring App
+The application allows users to:
+- Compare **Actual Generation** (blue) vs **Forecasted Generation** (green).
+- Adjust the **Forecast Horizon** (0-48h) via a slider.
+- Select date ranges for analysis.
+- View real-time error statistics (Mean Error, MAE, RMSE, P99).
+- Analyze wind reliability (P10 value) for capacity planning.
 
-**Use your preferred IDE**
+## 🧪 Analysis Highlights
+- **Error Sensitivity**: Analysis of how forecast accuracy degrades over longer horizons.
+- **Reliability Recommendation**: Calculated reliable wind capacity (P10) based on historical variability.
+- **Visualizations**: Distribution plots, hourly error trends, and cumulative generation curves.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+*Created as part of the hiring process for Reint.*
