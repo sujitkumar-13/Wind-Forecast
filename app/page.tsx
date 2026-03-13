@@ -21,8 +21,8 @@ import { AlertCircle } from "lucide-react";
 
 export default function Home() {
     const [dateRange, setDateRange] = useState<DateRange | undefined>({
-        from: new Date("2024-01-01"),
-        to: new Date("2024-01-31"),
+        from: new Date(process.env.NEXT_PUBLIC_DEFAULT_START_DATE || "2024-01-01"),
+        to: new Date(process.env.NEXT_PUBLIC_DEFAULT_END_DATE || "2024-01-31"),
     });
     const [forecastHorizon, setForecastHorizon] = useState(6);
     const [actuals, setActuals] = useState<ActualGenerationRecord[]>([]);
