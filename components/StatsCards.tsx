@@ -48,7 +48,7 @@ const StatsCards = ({ errorStats, reliability }: StatsCardsProps) => {
   ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+    <div className="grid grid-cols-2 lg:grid-cols-6 gap-2 md:gap-3">
       {cards.map((card, i) => {
         const Icon = card.icon;
         return (
@@ -57,16 +57,16 @@ const StatsCards = ({ errorStats, reliability }: StatsCardsProps) => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: i * 0.05 }}
-            className="card-glass rounded-lg p-3"
+            className="card-glass rounded-lg p-2.5 md:p-3"
           >
             <div className="flex items-center gap-1.5 mb-1">
-              <Icon className="h-3.5 w-3.5 text-primary" />
-              <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-wider truncate">
+              <Icon className="h-3 w-3 md:h-3.5 md:w-3.5 text-primary" />
+              <span className="text-[9px] md:text-[10px] font-medium text-muted-foreground uppercase tracking-wider truncate">
                 {card.label}
               </span>
             </div>
-            <p className="text-lg font-semibold font-mono text-foreground">{card.value}</p>
-            <p className="text-[10px] text-muted-foreground mt-0.5">{card.description}</p>
+            <p className="text-base md:text-lg font-semibold font-mono text-foreground leading-tight">{card.value}</p>
+            <p className="text-[9px] md:text-[10px] text-muted-foreground mt-0.5 leading-tight">{card.description}</p>
           </motion.div>
         );
       })}

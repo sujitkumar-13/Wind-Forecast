@@ -41,16 +41,16 @@ const ErrorDistributionChart = ({ data }: ErrorDistributionChartProps) => {
       transition={{ duration: 0.4, delay: 0.1 }}
       className="card-glass rounded-lg p-4 md:p-6"
     >
-      <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+      <h2 className="text-[10px] md:text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
         Forecast Error Distribution
       </h2>
-      <div className="h-[240px]">
+      <div className="h-[200px] md:h-[240px]">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={bins} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
+          <BarChart data={bins} margin={{ top: 5, right: 10, left: -20, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="hsl(220, 14%, 20%)" vertical={false} />
             <XAxis
               dataKey="range"
-              tick={{ fill: "hsl(215, 12%, 50%)", fontSize: 10, fontFamily: "JetBrains Mono" }}
+              tick={{ fill: "hsl(215, 12%, 50%)", fontSize: 9, fontFamily: "JetBrains Mono" }}
               tickLine={false}
               axisLine={{ stroke: "hsl(220, 14%, 20%)" }}
               interval="preserveStartEnd"

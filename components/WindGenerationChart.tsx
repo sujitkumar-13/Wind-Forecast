@@ -56,12 +56,12 @@ const WindGenerationChart = ({ data, isLoading }: WindGenerationChartProps) => {
       transition={{ duration: 0.4 }}
       className="card-glass rounded-lg p-4 md:p-6"
     >
-      <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+      <h2 className="text-[10px] md:text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3 md:mb-4">
         Wind Generation vs Forecast
       </h2>
-      <div className="h-[360px]">
+      <div className="h-[280px] md:h-[360px]">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={sampledData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
+          <LineChart data={sampledData} margin={{ top: 5, right: 5, left: -20, bottom: 5 }}>
             <CartesianGrid
               strokeDasharray="3 3"
               stroke="hsl(220, 14%, 20%)"
@@ -69,23 +69,17 @@ const WindGenerationChart = ({ data, isLoading }: WindGenerationChartProps) => {
             />
             <XAxis
               dataKey="shortTime"
-              tick={{ fill: "hsl(215, 12%, 50%)", fontSize: 11, fontFamily: "JetBrains Mono" }}
+              tick={{ fill: "hsl(215, 12%, 50%)", fontSize: 10, fontFamily: "JetBrains Mono" }}
               tickLine={false}
               axisLine={{ stroke: "hsl(220, 14%, 20%)" }}
               interval="preserveStartEnd"
+              minTickGap={30}
             />
             <YAxis
-              tick={{ fill: "hsl(215, 12%, 50%)", fontSize: 11, fontFamily: "JetBrains Mono" }}
+              tick={{ fill: "hsl(215, 12%, 50%)", fontSize: 10, fontFamily: "JetBrains Mono" }}
               tickLine={false}
               axisLine={false}
-              tickFormatter={(v) => `${(v / 1000).toFixed(1)}k`}
-              label={{
-                value: "MW",
-                angle: -90,
-                position: "insideLeft",
-                fill: "hsl(215, 12%, 50%)",
-                fontSize: 11,
-              }}
+              tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`}
             />
             <Tooltip
               contentStyle={{

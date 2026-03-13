@@ -70,7 +70,7 @@ export default function Home() {
     return (
         <div className="min-h-screen bg-background glow-top">
             <Header />
-            <main className="container py-6 space-y-6">
+            <main className="container px-4 md:px-6 py-6 space-y-4 md:space-y-6">
                 {error && (
                     <motion.div
                         initial={{ opacity: 0 }}

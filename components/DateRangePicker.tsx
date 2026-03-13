@@ -23,17 +23,19 @@ const DateRangePicker = ({ dateRange, onDateRangeChange }: DateRangePickerProps)
         <PopoverTrigger asChild>
           <Button
             variant="outline"
-            className="w-full justify-start text-left font-mono text-sm bg-secondary/50 border-border hover:bg-secondary"
+            className="w-full justify-start text-left font-mono text-sm bg-background/50 border-border hover:bg-accent hover:text-accent-foreground transition-colors"
           >
             <Calendar className="mr-2 h-4 w-4 text-primary" />
-            {dateRange?.from ? (
-              <>
-                {format(dateRange.from, "dd MMM")}
-                {dateRange.to && ` – ${format(dateRange.to, "dd MMM yyyy")}`}
-              </>
-            ) : (
-              <span className="text-muted-foreground">Select dates</span>
-            )}
+            <span className="text-foreground">
+              {dateRange?.from ? (
+                <>
+                  {format(dateRange.from, "dd MMM")}
+                  {dateRange.to && ` – ${format(dateRange.to, "dd MMM yyyy")}`}
+                </>
+              ) : (
+                <span className="text-muted-foreground">Select dates</span>
+              )}
+            </span>
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-auto p-0 bg-card border-border" align="start">
