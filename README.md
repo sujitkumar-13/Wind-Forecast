@@ -5,7 +5,7 @@ This project is a submission for the Full Stack SWE challenge. It includes a web
 ## 🚀 Live Demo
 - **App Link**: [Wind-Forecast](https://wind-forecast.vercel.app/)
 - **Github Repo Link**: [Wind-Forecast](https://github.com/sujitkumar-13/Wind-Forecast)
-- **Repo Link**: [Google Drive Link](https://drive.google.com/link-to-zip)
+- **Repo Link**: [Google Drive Link](https://drive.google.com/drive/folders/1KEOJ8uMS5DU3rnJWuJuCd1A8H2cXzRGz?usp=sharing)
 
 ## 📁 Repository Structure
 - `app/`: Next.js App Router containing pages, globals, and layout.
