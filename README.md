@@ -3,8 +3,8 @@
 This project is a submission for the Full Stack SWE challenge. It includes a web application for monitoring wind power forecasts and a Jupyter notebook for deep analysis of forecast errors and wind generation reliability in the UK.
 
 ## 🚀 Live Demo
-- **App Link**: [Deploy on Vercel/Heroku/Similar](https://your-app-link.vercel.app)
-- **Demo Video**: [YouTube Link](https://youtube.com/link-to-video)
+- **App Link**: [Wind-Forecast](https://wind-forecast.vercel.app/)
+- **Github Repo Link**: [Wind-Forecast](https://github.com/sujitkumar-13/Wind-Forecast)
 - **Repo Link**: [Google Drive Link](https://drive.google.com/link-to-zip)
 
 ## 📁 Repository Structure
@@ -39,7 +39,20 @@ This project is a submission for the Full Stack SWE challenge. It includes a web
 2. Install requirements: `pip install pandas numpy matplotlib seaborn`.
 3. Open `analysis.ipynb` to view the forecast error and reliability study.
 
-## 📊 Forecast Monitoring App Features
+## � Environment Variables
+The application requires the following environment variables to be set in a `.env` file in the root directory:
+
+```env
+NEXT_PUBLIC_ACTUAL_API_URL=https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream
+NEXT_PUBLIC_FORECAST_API_URL=https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream
+NEXT_PUBLIC_DEFAULT_START_DATE=2024-01-01
+NEXT_PUBLIC_DEFAULT_END_DATE=2024-01-31
+```
+
+> [!IMPORTANT]
+> Ensure these variables are also configured in your deployment platform (e.g., Vercel Environment Variables).
+
+## �📊 Forecast Monitoring App Features
 - **Actual vs Forecast**: Compare **Actual Generation** (blue) with **Forecasted Generation** (green).
 - **Forecast Horizon**: Configurable 0-48h horizon slider.
 - **Dynamic Stats**: Real-time calculation of MAE, RMSE, P99 Error, and P10 Reliability.
